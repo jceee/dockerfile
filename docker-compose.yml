@@ -1,0 +1,15 @@
+dev-go1.14.12:
+    image: jceee/go14dev:latest
+    environment:
+        - RUN_DEBUG=1
+        #- RUN_XHPROF=0
+        - RUN_ENV=dev
+        #- RUN_SERVER_SUPPLIER=aliyun-docker
+        - RUN_SERVER=go-docker
+        - RUN_CONTAINER_TYPE=docker
+#        - XDEBUG_CONFIG=remote_host=10.254.254.254
+#        - PHP_IDE_CONFIG=serverName=dev.meijiabang.cn
+    volumes:
+        - ~/code/:/data/web/
+    ports:
+        - 80:80
